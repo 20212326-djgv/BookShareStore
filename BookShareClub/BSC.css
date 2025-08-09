@@ -1,0 +1,300 @@
+:root {
+    --color-fondo: #1B1B1B;
+    --color-principal: #77ABB6;
+    --color-secundario: #F8B097;
+    --color-acento: #3FC495;
+    --color-texto: #ffffff;
+    --color-texto-oscuro: #333333;
+}
+
+/* ===================== */
+/*  LOGIN                 */
+/* ===================== */
+body.login-page {
+    background-color: var(--color-fondo);
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: #222;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    width: 320px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: var(--color-principal);
+    margin-bottom: 1.5rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: var(--color-texto);
+}
+
+.login-container input:focus {
+    outline: 2px solid var(--color-acento);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-principal);
+    border: none;
+    border-radius: 6px;
+    color: var(--color-texto);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background-color: var(--color-acento);
+}
+
+/* ===================== */
+/*  CRUD DE LIBROS        */
+/* ===================== */
+
+/* ===========================
+   BOTONES
+   =========================== */
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #77ABB6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3FC495;
+}
+
+.btn-danger {
+    background-color: #F8B097;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #e98673;
+}
+
+/* ===========================
+   TABLAS
+   =========================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+}
+
+th {
+    background-color: #1B1B1B;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+tr:hover {
+    background-color: rgba(119, 171, 182, 0.1);
+}
+
+/* ===========================
+   MENSAJES
+   =========================== */
+.success {
+    background-color: #3FC495;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.error {
+    background-color: #F8B097;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+
+/*body {
+    background-color: #1B1B1B;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #1B1B1B;
+    border-bottom: 2px solid #3FC495;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F8B097;
+  }
+  
+  .nav-link {
+    color: #77ABB6;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .inicio {
+    text-align: center;
+    padding: 5rem 1rem;
+  }
+  
+  .inicio-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3FC495;
+    margin-bottom: 1rem;
+  }
+  
+  .inicio-desc {
+    color: #F8B097;
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #77ABB6;
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #3FC495;
+  }
+  
+  .libros {
+    padding: 4rem 1rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #F8B097;
+  }
+  
+  .libros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .libro-card {
+    background-color: #2B2B2B;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #3FC495;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .libro-titulo {
+    font-size: 1.25rem;
+    color: #77ABB6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .libro-desc {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .acerca {
+    background-color: #2B2B2B;
+    padding: 4rem 1rem;
+  }
+  
+  .acerca-desc {
+    color: #ccc;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #aaa;
+    border-top: 2px solid #3FC495;
+  }
+
+  .filtros-libros {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .buscador-libros {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .input-busqueda {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+  }
